@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Academic Partnerships | National College of Ireland</title>
+<meta name="description" content="Academic Partnerships at National College of Ireland.">
+<style>
+:root{
+  --navy:#022B55; --deep:#070F2E; --river:#0069B4; --sea:#0093B8; --teal:#00ADB8;
+  --sky:#009FDE; --yellow:#FBB900; --ink:#15243a; --muted:#5d6b7b; --line:#d9e3ec;
+  --mist:#f3f7fa; --soft:#f8fafc; --white:#fff; --shadow:0 18px 46px rgba(7,15,46,.10);
+  --radius:18px; --max:1220px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:68px}
+body{margin:0;font-family:Verdana,Geneva,sans-serif;color:var(--ink);background:#fff;line-height:1.55}
+a{color:var(--river);text-underline-offset:3px}
+a:hover{color:var(--navy)}
+.wrap{max-width:var(--max);margin:auto;padding:0 24px}
+.skip{position:absolute;left:-10000px}
+.skip:focus{left:12px;top:12px;z-index:999;background:#fff;padding:10px 14px}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+h1,h2,h3,h4{margin-top:0;line-height:1.14;color:var(--deep)}
+p{margin-top:0}
+
+/* shell */
+.utility{background:var(--deep);color:#fff;font-size:.75rem}
+.utility .wrap{min-height:38px;display:flex;justify-content:space-between;align-items:center;gap:18px}
+.utility-links{display:flex;gap:18px;flex-wrap:wrap}
+.utility a{color:#fff;text-decoration:none}
+.brandbar{border-bottom:1px solid var(--line);background:#fff}
+.brandbar .wrap{min-height:88px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.wordmark{display:flex;align-items:center;gap:13px;color:var(--navy);text-decoration:none}
+.mark{border-left:8px solid var(--river);padding-left:10px;font-weight:900;font-size:1.95rem;letter-spacing:-.08em;line-height:1}
+.marktext{font-size:.67rem;line-height:1.25}
+.mainnav{display:flex;gap:24px;align-items:center;font-size:.82rem;font-weight:800}
+.mainnav a{color:var(--navy);text-decoration:none}
+.mainnav a.active{color:var(--river)}
+.breadcrumb{border-bottom:1px solid var(--line);font-size:.73rem;color:var(--muted)}
+.breadcrumb .wrap{padding-top:10px;padding-bottom:10px}
+.breadcrumb a{color:var(--muted);text-decoration:none}
+.subnav{position:sticky;top:0;z-index:50;background:rgba(2,43,85,.98);box-shadow:0 5px 18px rgba(7,15,46,.12)}
+.subnav .wrap{min-height:54px;display:flex;align-items:center;gap:20px}
+.subnav-title{color:#fff;text-transform:uppercase;letter-spacing:.07em;font-size:.74rem;font-weight:900;white-space:nowrap}
+.subnav-links{display:flex;gap:4px;overflow:auto;scrollbar-width:none}
+.subnav-links::-webkit-scrollbar{display:none}
+.subnav-links a{color:#fff;text-decoration:none;font-size:.69rem;white-space:nowrap;padding:9px 10px;border-radius:5px}
+.subnav-links a:hover{background:rgba(255,255,255,.12)}
+
+/* hero */
+.hero{
+  position:relative;overflow:hidden;color:#fff;
+  background:
+   radial-gradient(circle at 90% 18%,rgba(0,173,184,.38) 0 13%,transparent 13.4%),
+   radial-gradient(circle at 94% 75%,rgba(0,147,184,.22) 0 24%,transparent 24.4%),
+   linear-gradient(120deg,var(--deep),var(--navy) 52%,var(--river));
+}
+.hero:after{
+  content:"";position:absolute;width:620px;height:620px;border-radius:50%;right:-235px;top:-290px;
+  border:2px solid rgba(255,255,255,.12);box-shadow:0 0 0 42px rgba(255,255,255,.04),0 0 0 90px rgba(255,255,255,.025)
+}
+.hero .wrap{position:relative;z-index:2;min-height:530px;display:grid;grid-template-columns:1.08fr .92fr;gap:44px;align-items:center;padding-top:62px;padding-bottom:62px}
+.eyebrow{display:flex;align-items:center;gap:9px;text-transform:uppercase;letter-spacing:.09em;font-size:.71rem;font-weight:900}
+.eyebrow:before{content:"";width:30px;height:3px;background:var(--teal)}
+.hero h1{font-size:clamp(2.5rem,5.4vw,4.8rem);letter-spacing:-.05em;color:#fff;margin:15px 0 19px;max-width:760px}
+.hero .lead{font-size:1.01rem;line-height:1.65;color:#eaf3f8;max-width:760px;margin-bottom:28px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:45px;padding:0 17px;border-radius:6px;border:2px solid transparent;text-decoration:none;font-size:.78rem;font-weight:900}
+.btn.primary{background:var(--teal);color:var(--deep)}
+.btn.primary:hover{background:#fff;color:var(--navy)}
+.btn.ghost{border-color:#fff;color:#fff}
+.btn.ghost:hover{background:#fff;color:var(--navy)}
+.btn.dark{background:var(--navy);color:#fff}
+.btn.outline{background:#fff;border-color:#bfd1df;color:var(--navy)}
+.hero-visual{
+  background:rgba(255,255,255,.97);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);color:var(--ink)
+}
+.hero-visual h2{font-size:1.2rem;margin-bottom:6px}
+.hero-visual p{font-size:.73rem;color:var(--muted)}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:16px 0 14px}
+.hero-stat{background:var(--mist);border-radius:10px;padding:13px}
+.hero-stat strong{display:block;font-size:1.35rem;color:var(--navy);letter-spacing:-.05em}
+.hero-stat span{display:block;font-size:.6rem;color:var(--muted);margin-top:4px}
+.quick-links{display:grid;gap:0;border-top:1px solid var(--line)}
+.quick-links a{display:flex;justify-content:space-between;gap:10px;text-decoration:none;color:var(--navy);font-size:.74rem;font-weight:800;padding:11px 0;border-bottom:1px solid var(--line)}
+
+/* shared */
+section{padding:74px 0}
+.soft{background:var(--mist)}
+.section-head{max-width:850px;margin-bottom:32px}
+.kicker{color:var(--river);text-transform:uppercase;letter-spacing:.08em;font-size:.7rem;font-weight:900;margin-bottom:8px}
+.section-head h2{font-size:clamp(1.8rem,3vw,2.65rem);letter-spacing:-.035em;margin-bottom:11px}
+.section-head p{color:var(--muted);margin:0}
+
+/* cards */
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.card{border:1px solid var(--line);background:#fff;padding:22px}
+.card h3{font-size:.98rem;margin-bottom:8px}
+.card p{font-size:.72rem;color:var(--muted);margin:0}
+.icon-box{width:40px;height:40px;border-radius:10px;background:#e9f4fb;color:var(--navy);display:grid;place-items:center;font-weight:900;margin-bottom:14px}
+.metric-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);background:#fff}
+.metric{padding:22px;border-right:1px solid var(--line)}
+.metric:last-child{border-right:0}
+.metric strong{display:block;font-size:2rem;color:var(--navy);letter-spacing:-.05em}
+.metric b{display:block;font-size:.72rem;color:var(--ink)}
+.metric span{display:block;font-size:.62rem;color:var(--muted);margin-top:6px}
+
+/* pathway / process */
+.pathway{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:24px
+}
+.step{
+  position:relative;background:#fff;border:1px solid var(--line);padding:19px 16px;min-height:158px
+}
+.step:not(:last-child):after{
+  content:"→";position:absolute;right:-10px;top:50%;transform:translateY(-50%);z-index:2;width:20px;height:20px;border-radius:50%;
+  display:grid;place-items:center;background:var(--navy);color:#fff;font-size:.65rem
+}
+.step b{display:block;color:var(--river);font-size:.66rem;text-transform:uppercase;letter-spacing:.06em}
+.step h3{font-size:.84rem;margin:8px 0 5px}
+.step p{font-size:.64rem;color:var(--muted);margin:0}
+
+/* learner imagery */
+.story-card{border:1px solid var(--line);background:#fff;overflow:hidden}
+.story-visual{background:linear-gradient(135deg,#eef7fb,#eefaf8);padding:18px;border-bottom:1px solid var(--line)}
+.story-content{padding:18px}
+.story-content .tag{font-size:.62rem;color:var(--river);text-transform:uppercase;letter-spacing:.06em;font-weight:900}
+.story-content h3{font-size:.92rem;margin:7px 0}
+.story-content p{font-size:.68rem;color:var(--muted);margin-bottom:0}
+svg{max-width:100%;height:auto;display:block}
+
+/* quality assurance */
+.qa-box{
+  background:linear-gradient(115deg,var(--navy),var(--river));color:#fff;border-radius:var(--radius);padding:30px
+}
+.qa-box h3{color:#fff;font-size:1.45rem}
+.qa-box p{font-size:.77rem;color:#e7f1f8}
+.qa-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.qa-point{background:rgba(255,255,255,.1);padding:12px;border-radius:8px;font-size:.68rem;font-weight:800}
+.link-list{display:grid;gap:9px}
+.link-list a{display:flex;justify-content:space-between;gap:12px;background:var(--mist);padding:11px;text-decoration:none;color:var(--navy);font-size:.69rem;font-weight:800}
+
+/* partner wall */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.tab{
+  border:1px solid #c8d8e4;background:#fff;color:var(--navy);padding:8px 13px;border-radius:30px;
+  font-size:.7rem;font-weight:900;cursor:pointer
+}
+.tab.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.partner-wall{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.partner{
+  border:1px solid var(--line);background:#fff;border-radius:12px;overflow:hidden
+}
+.logo{
+  min-height:88px;display:grid;place-items:center;background:linear-gradient(135deg,#f7fafc,#eef4f8);
+  border-bottom:1px solid var(--line);padding:18px;text-align:center
+}
+.logo-badge{
+  min-width:108px;min-height:44px;display:grid;place-items:center;padding:10px 16px;border-radius:12px;
+  color:#fff;font-weight:900;font-size:1rem;letter-spacing:-.03em
+}
+.logo.one{background:linear-gradient(135deg,#0069B4,#00ADB8)}
+.logo.two{background:linear-gradient(135deg,#022B55,#0093B8)}
+.logo.three{background:linear-gradient(135deg,#1c6c4b,#47a36b)}
+.logo.four{background:linear-gradient(135deg,#6a3db5,#009FDE)}
+.logo.five{background:linear-gradient(135deg,#c05f00,#f0a100)}
+.logo.six{background:linear-gradient(135deg,#384860,#00ADB8)}
+.logo.seven{background:linear-gradient(135deg,#045b8c,#7f52d9)}
+.logo.eight{background:linear-gradient(135deg,#01576e,#2c9d5b)}
+.partner-body{padding:16px}
+.partner small{display:block;color:var(--river);font-weight:900;text-transform:uppercase;letter-spacing:.06em;font-size:.6rem;margin-bottom:6px}
+.partner h3{font-size:.85rem;margin-bottom:6px}
+.partner p{font-size:.66rem;color:var(--muted);margin:0}
+.partner[data-type]:not(.show){display:none}
+.note{font-size:.66rem;color:var(--muted);margin-top:13px}
+
+/* CTA / footer */
+.cta{
+  background:linear-gradient(100deg,var(--river),var(--sea),var(--teal));color:#fff;border-radius:var(--radius);
+  padding:34px;display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center
+}
+.cta h2{color:#fff;margin-bottom:7px}
+.cta p{font-size:.8rem;color:#eef7fb;margin:0;max-width:760px}
+
+footer{background:var(--deep);color:#dce6ef;padding:46px 0 25px;font-size:.7rem}
+.footer-grid{display:grid;grid-template-columns:1.2fr repeat(3,1fr);gap:30px}
+footer h3{color:#fff;font-size:.78rem}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+footer a{color:#dce6ef;text-decoration:none}
+.footer-mark{font-size:2rem;font-weight:900;color:#fff;letter-spacing:-.08em}
+.fine{border-top:1px solid rgba(255,255,255,.15);margin-top:30px;padding-top:17px;color:#aebcca;font-size:.63rem}
+
+@media(max-width:1000px){
+  .mainnav{display:none}
+  .hero .wrap,.grid-2,.grid-3,.cta{grid-template-columns:1fr}
+  .grid-4,.partner-wall,.pathway,.qa-list,.team{grid-template-columns:repeat(2,1fr)}
+  .metric-strip{grid-template-columns:repeat(2,1fr)}
+  .metric{border-bottom:1px solid var(--line)}
+  .step:not(:last-child):after{content:"↓";right:auto;left:50%;top:auto;bottom:-11px;transform:translateX(-50%)}
+}
+@media(max-width:700px){
+  .utility-links:last-child,.subnav-title{display:none}
+  .marktext{display:none}
+  .hero .wrap{min-height:auto;padding-top:46px;padding-bottom:46px}
+  section{padding:56px 0}
+  .grid-4,.grid-3,.grid-2,.partner-wall,.metric-strip,.pathway,.qa-list{grid-template-columns:1fr}
+  .metric{border-right:0}
+  .hero-stats{grid-template-columns:1fr}
+  .cta{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<div class="utility"><div class="wrap">
+  <div class="utility-links"><a href="https://www.ncirl.ie/Students">Students</a><a href="https://www.ncirl.ie/Staff">Staff</a><a href="https://ncisupporthub.ncirl.ie/hc/en-ie">NCI Support Hub</a><a href="https://moodle.ncirl.ie/">Moodle</a></div>
+  <div class="utility-links"><a href="https://www.ncirl.ie/About/Our-People/A-Z-Staff-Directory">Staff A–Z</a><a href="https://www.ncirl.ie/Contact">Contact NCI</a></div>
+</div></div>
+
+<header class="brandbar"><div class="wrap">
+  <a class="wordmark" href="https://www.ncirl.ie/"><span class="mark">NCI</span><span class="marktext">National College<br>of Ireland</span></a>
+  <nav class="mainnav" aria-label="Primary"><a href="https://www.ncirl.ie/Courses">Courses</a><a href="https://www.ncirl.ie/Students">Students</a><a href="https://www.ncirl.ie/About">About</a><a class="active" href="#top">Academic Partnerships</a><a href="https://www.ncirl.ie/Research">Research</a></nav>
+</div></header>
+
+<div class="breadcrumb"><div class="wrap"><a href="https://www.ncirl.ie/">Home</a> › <a href="https://www.ncirl.ie/About">About</a> › <a href="https://www.ncirl.ie/QIE">Quality &amp; Institutional Effectiveness</a> › Academic Partnerships</div></div>
+
+<div class="subnav" id="top"><div class="wrap">
+  <div class="subnav-title">Academic Partnerships</div>
+  <nav class="subnav-links" aria-label="Academic Partnerships sections">
+    <a href="#overview">Overview</a>
+    <a href="#why-nci">Why partner with NCI</a>
+    <a href="#models">Partnership models</a>
+    <a href="#learners">Learner experience</a>
+    <a href="#partners">Our partners</a>
+    <a href="#quality">Quality & governance</a>
+    <a href="#contact">Partner with us</a>
+  </nav>
+</div></div>
+
+<main id="main">
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Academic Partnerships</div>
+      <h1>Building partnerships that create opportunity</h1>
+      <p class="lead">National College of Ireland works with education providers, employers, professional bodies and other organisations to create progression routes, academic collaboration, work-based learning and other partnership opportunities that connect learning with the needs of society and the workplace.</p>
+      <div class="actions">
+        <a class="btn primary" href="#contact">Propose a partnership →</a>
+        <a class="btn ghost" href="#partners">Meet our partners</a>
+      </div>
+    </div>
+
+    <aside class="hero-visual">
+      <h2>At a glance</h2>
+      <p>NCI is an independent, not-for-profit higher education institution based in the heart of Dublin's Docklands, with a strong focus on access, innovation and enterprise-focused education.</p>
+      <div class="hero-stats">
+        <div class="hero-stat"><strong>75+</strong><span>years changing lives through education</span></div>
+        <div class="hero-stat"><strong>4</strong><span>core partnership pathways highlighted here</span></div>
+        <div class="hero-stat"><strong>1</strong><span>clear route to start a conversation</span></div>
+      </div>
+      <div class="quick-links">
+        <a href="https://www.ncirl.ie/QIE/QAES/Partnerships">QAES Partnerships domain <span>↗</span></a>
+        <a href="https://ncisupporthub.ncirl.ie/hc/en-ie/articles/21895450215580-Policy-on-Collaborative-Provision-and-Academic-Partnerships">Academic Partnerships Policy <span>↗</span></a>
+        <a href="https://www.ncirl.ie/P-TECH-Collaboration">P-TECH collaboration <span>↗</span></a>
+        <a href="https://www.ncirl.ie/Students/Careers/-Employers/Recruit-Students-Graduates/Become-an-Employer-Partner">Employer partnerships <span>↗</span></a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section id="overview">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Overview</div>
+      <h2>Partnerships that support learners, programmes and institutions</h2>
+      <p>Academic partnerships at NCI are developed around shared objectives and designed to create meaningful outcomes for learners, partner organisations and the wider community.</p>
+    </div>
+
+    <div class="metric-strip">
+      <div class="metric"><strong>Access</strong><b>new pathways into higher education</b><span>Partnerships can widen participation and create progression opportunities for learners.</span></div>
+      <div class="metric"><strong>Quality</strong><b>shared responsibility with clear standards</b><span>Formal academic partnerships are governed through approval, due diligence and oversight.</span></div>
+      <div class="metric"><strong>Relevance</strong><b>strong links with society and the workplace</b><span>NCI works with external stakeholders to keep programmes current and meaningful.</span></div>
+      <div class="metric"><strong>Opportunity</strong><b>benefits for students and partners</b><span>Collaboration can support mobility, work-based learning, innovation and knowledge exchange.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="why-nci">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Why partner with NCI</div>
+      <h2>A practical, mission-led partner</h2>
+      <p>NCI brings together academic expertise, an enterprise-focused approach and a strong commitment to creating opportunity through education.</p>
+    </div>
+
+    <div class="grid-4">
+      <article class="card"><div class="icon-box">AC</div><h3>Academic collaboration</h3><p>Develop progression pathways, articulation routes and collaborative educational opportunities with a higher education institution rooted in quality assurance and learner success.</p></article>
+      <article class="card"><div class="icon-box">SO</div><h3>Student opportunities</h3><p>Create meaningful opportunities for mobility, work-based learning, employability, professional development and cultural exchange.</p></article>
+      <article class="card"><div class="icon-box">IE</div><h3>Industry engagement</h3><p>Connect organisations with NCI students, programmes and academic expertise through projects, mentoring, placements and collaborative activity.</p></article>
+      <article class="card"><div class="icon-box">IK</div><h3>Innovation &amp; knowledge exchange</h3><p>Share expertise and explore opportunities for research, innovation and knowledge exchange that support learners, partners and communities.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="models">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Partnership models</div>
+      <h2>Different ways to work with NCI</h2>
+      <p>NCI partnerships take different forms depending on the needs of learners, partner organisations and the nature of the collaboration.</p>
+    </div>
+
+    <div class="grid-4">
+      <article class="card"><div class="icon-box">CP</div><h3>Collaborative provision</h3><p>Formal arrangements where NCI and a partner share responsibility for aspects of programme design, delivery, assessment or support.</p></article>
+      <article class="card"><div class="icon-box">AR</div><h3>Articulation &amp; progression</h3><p>Mapped routes that enable learners from a partner institution to progress into a later stage or related programme at NCI.</p></article>
+      <article class="card"><div class="icon-box">TNE</div><h3>International / TNE</h3><p>Academic collaboration with international partners, including programme delivery or progression activity outside Ireland where appropriate.</p></article>
+      <article class="card"><div class="icon-box">PR</div><h3>Recognition &amp; pathways</h3><p>Advanced standing, credit recognition and professionally linked academic arrangements that support coherent learner journeys.</p></article>
+    </div>
+
+    <div class="section-head" style="margin-top:34px;margin-bottom:22px">
+      <div class="kicker">How a formal partnership develops</div>
+      <h2 style="font-size:1.6rem">From first conversation to approved partnership</h2>
+    </div>
+
+    <div class="pathway" aria-label="Academic partnership process">
+      <div class="step"><b>Step 1</b><h3>Explore</h3><p>Identify the opportunity, intended outcomes, partner fit and the learner or institutional need the partnership will address.</p></div>
+      <div class="step"><b>Step 2</b><h3>Evaluate</h3><p>Undertake due diligence, define the partnership model, clarify responsibilities and consider quality assurance implications.</p></div>
+      <div class="step"><b>Step 3</b><h3>Approve</h3><p>Bring the proposal through the relevant NCI quality assurance and governance processes for institutional approval.</p></div>
+      <div class="step"><b>Step 4</b><h3>Deliver &amp; review</h3><p>Implement the partnership with ongoing monitoring, review and a focus on learner experience, standards and effectiveness.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="learners">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Learner experience</div>
+      <h2>What partnerships make possible for learners</h2>
+      <p>Partnerships are most meaningful when learners experience clear benefits: stronger progression, richer applied learning, broader networks and better access to opportunity.</p>
+    </div>
+
+    <div class="grid-3">
+      <article class="story-card">
+        <div class="story-visual">
+          <svg viewBox="0 0 360 220" aria-label="Illustration of learners at a partner college progressing to NCI">
+            <rect x="0" y="0" width="360" height="220" fill="#eef7fb"/>
+            <rect x="22" y="58" width="118" height="108" rx="12" fill="#d8ebf8"/>
+            <rect x="220" y="46" width="118" height="120" rx="12" fill="#d7f0ed"/>
+            <rect x="46" y="74" width="70" height="8" rx="4" fill="#7aaed5"/>
+            <rect x="244" y="62" width="68" height="8" rx="4" fill="#62b89f"/>
+            <circle cx="82" cy="136" r="22" fill="#f4c6a6"/>
+            <rect x="60" y="158" width="44" height="30" rx="14" fill="#0069B4"/>
+            <circle cx="128" cy="136" r="22" fill="#f0bf96"/>
+            <rect x="106" y="158" width="44" height="30" rx="14" fill="#022B55"/>
+            <circle cx="258" cy="126" r="22" fill="#f0bf96"/>
+            <rect x="236" y="148" width="44" height="34" rx="14" fill="#00ADB8"/>
+            <circle cx="300" cy="126" r="22" fill="#f6c9a8"/>
+            <rect x="278" y="148" width="44" height="34" rx="14" fill="#2a9d5b"/>
+            <path d="M152 138 C178 118 200 118 218 126" fill="none" stroke="#0069B4" stroke-width="7" stroke-linecap="round"/>
+            <polygon points="214,117 230,125 216,136" fill="#0069B4"/>
+            <text x="50" y="103" font-family="Verdana" font-size="12" fill="#022B55" font-weight="700">Partner College</text>
+            <text x="252" y="92" font-family="Verdana" font-size="12" fill="#022B55" font-weight="700">NCI</text>
+          </svg>
+        </div>
+        <div class="story-content">
+          <div class="tag">Progression routes</div>
+          <h3>Clear pathways into higher education</h3>
+          <p>Articulation and progression arrangements can help learners build on prior study and move more confidently into the next stage of their academic journey.</p>
+        </div>
+      </article>
+
+      <article class="story-card">
+        <div class="story-visual">
+          <svg viewBox="0 0 360 220" aria-label="Illustration of learners and an employer partner working on a project">
+            <rect x="0" y="0" width="360" height="220" fill="#eefaf8"/>
+            <rect x="34" y="38" width="292" height="148" rx="18" fill="#ffffff" stroke="#d9e3ec"/>
+            <rect x="55" y="56" width="112" height="70" rx="8" fill="#d8ebf8"/>
+            <rect x="185" y="56" width="116" height="10" rx="5" fill="#d6ece6"/>
+            <rect x="185" y="76" width="92" height="10" rx="5" fill="#d6ece6"/>
+            <rect x="185" y="96" width="70" height="10" rx="5" fill="#d6ece6"/>
+            <circle cx="96" cy="154" r="21" fill="#f4c6a6"/>
+            <rect x="74" y="174" width="44" height="30" rx="14" fill="#0069B4"/>
+            <circle cx="148" cy="154" r="21" fill="#efbe95"/>
+            <rect x="126" y="174" width="44" height="30" rx="14" fill="#00ADB8"/>
+            <circle cx="248" cy="150" r="21" fill="#f4c6a6"/>
+            <rect x="226" y="170" width="44" height="30" rx="14" fill="#2a9d5b"/>
+            <circle cx="286" cy="150" r="21" fill="#f3c29c"/>
+            <rect x="264" y="170" width="44" height="30" rx="14" fill="#022B55"/>
+          </svg>
+        </div>
+        <div class="story-content">
+          <div class="tag">Applied learning</div>
+          <h3>Learning connected to practice</h3>
+          <p>Industry-linked partnerships can support live projects, mentoring, placements and other experiences that connect study with real-world contexts.</p>
+        </div>
+      </article>
+
+      <article class="story-card">
+        <div class="story-visual">
+          <svg viewBox="0 0 360 220" aria-label="Illustration of learners taking part in international or mobility experiences">
+            <rect x="0" y="0" width="360" height="220" fill="#eef7fb"/>
+            <circle cx="180" cy="108" r="58" fill="#d9edf8"/>
+            <path d="M130 108a50 50 0 00100 0a50 50 0 00-100 0" fill="none" stroke="#7aaed5" stroke-width="2"/>
+            <path d="M180 50c-18 18-28 38-28 58s10 40 28 58c18-18 28-38 28-58s-10-40-28-58z" fill="none" stroke="#7aaed5" stroke-width="2"/>
+            <path d="M122 108h116M138 82h84M138 134h84" stroke="#7aaed5" stroke-width="2"/>
+            <circle cx="108" cy="162" r="21" fill="#f2c39e"/>
+            <rect x="86" y="182" width="44" height="28" rx="14" fill="#022B55"/>
+            <circle cx="180" cy="170" r="21" fill="#f4c7a8"/>
+            <rect x="158" y="190" width="44" height="28" rx="14" fill="#0069B4"/>
+            <circle cx="252" cy="162" r="21" fill="#efc097"/>
+            <rect x="230" y="182" width="44" height="28" rx="14" fill="#00ADB8"/>
+            <path d="M108 130 C130 114 146 116 158 124" fill="none" stroke="#00ADB8" stroke-width="6" stroke-linecap="round"/>
+            <path d="M202 124 C216 115 231 114 252 130" fill="none" stroke="#00ADB8" stroke-width="6" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="story-content">
+          <div class="tag">Mobility &amp; exchange</div>
+          <h3>Broader horizons and networks</h3>
+          <p>International and mobility partnerships can broaden learners’ experience through cultural exchange, collaboration and new educational opportunities.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="partners">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Our partners</div>
+      <h2>Illustrative partner network</h2>
+      <p>Below is a sample partner wall showing how academic partnerships could be presented on the website. The organisations and logos in this section are placeholders for design purposes.</p>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Partner categories">
+      <button class="tab active" data-filter="all">All</button>
+      <button class="tab" data-filter="education">Education</button>
+      <button class="tab" data-filter="employer">Employers</button>
+      <button class="tab" data-filter="professional">Professional bodies</button>
+      <button class="tab" data-filter="international">International</button>
+    </div>
+
+    <div class="partner-wall">
+      <article class="partner show" data-type="education">
+        <div class="logo"><div class="logo-badge logo one">Northbridge Institute</div></div>
+        <div class="partner-body"><small>Education partner</small><h3>Northbridge Institute</h3><p>Progression pathways in business and computing, with mapped routes into NCI programmes.</p></div>
+      </article>
+
+      <article class="partner show" data-type="employer">
+        <div class="logo"><div class="logo-badge logo two">Docklands Tech Alliance</div></div>
+        <div class="partner-body"><small>Employer partner</small><h3>Docklands Tech Alliance</h3><p>Industry projects, guest input and employability-focused collaboration for learners.</p></div>
+      </article>
+
+      <article class="partner show" data-type="professional">
+        <div class="logo"><div class="logo-badge logo three">FutureHR Council</div></div>
+        <div class="partner-body"><small>Professional body</small><h3>FutureHR Council</h3><p>Recognition pathways, professional alignment and links between programmes and sector practice.</p></div>
+      </article>
+
+      <article class="partner show" data-type="international">
+        <div class="logo"><div class="logo-badge logo four">Global Pathways College</div></div>
+        <div class="partner-body"><small>International partner</small><h3>Global Pathways College</h3><p>International progression and collaborative educational activity supporting learner mobility.</p></div>
+      </article>
+
+      <article class="partner show" data-type="education">
+        <div class="logo"><div class="logo-badge logo five">East Harbour Academy</div></div>
+        <div class="partner-body"><small>Education partner</small><h3>East Harbour Academy</h3><p>Articulation arrangements designed to create clear routes from prior study into higher education.</p></div>
+      </article>
+
+      <article class="partner show" data-type="employer">
+        <div class="logo"><div class="logo-badge logo six">Civic Skills Network</div></div>
+        <div class="partner-body"><small>Employer / community partner</small><h3>Civic Skills Network</h3><p>Collaborative opportunities linking student learning with community and workplace needs.</p></div>
+      </article>
+
+      <article class="partner show" data-type="professional">
+        <div class="logo"><div class="logo-badge logo seven">Professional Finance Forum</div></div>
+        <div class="partner-body"><small>Professional body</small><h3>Professional Finance Forum</h3><p>Programme relevance, professional insight and sector engagement supporting learner development.</p></div>
+      </article>
+
+      <article class="partner show" data-type="international">
+        <div class="logo"><div class="logo-badge logo eight">Europa Learning Hub</div></div>
+        <div class="partner-body"><small>International partner</small><h3>Europa Learning Hub</h3><p>Collaborative teaching and learner exchange opportunities with an international dimension.</p></div>
+      </article>
+    </div>
+
+    <p class="note">Placeholder partner logos are used here to show structure and presentation only.</p>
+  </div>
+</section>
+
+<section class="soft" id="quality">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Quality &amp; governance</div>
+      <h2>How academic partnerships are quality-assured</h2>
+      <p>Formal academic partnerships are developed within NCI’s quality assurance framework so that responsibilities are clear and academic standards, learner experience and the integrity of NCI awards are protected.</p>
+    </div>
+
+    <div class="grid-2">
+      <article class="qa-box">
+        <h3>Quality comes first</h3>
+        <p>NCI’s Partnerships domain sets out the frameworks, policies and oversight mechanisms for formal relationships with academic institutions, industry bodies, employers and other strategic partners. Formal academic partnerships are supported by appropriate governance, approval and ongoing review.</p>
+        <div class="qa-list">
+          <div class="qa-point">Due diligence and partner evaluation</div>
+          <div class="qa-point">Clear approval and governance routes</div>
+          <div class="qa-point">Defined responsibilities and agreements</div>
+          <div class="qa-point">Protection of learner experience and standards</div>
+          <div class="qa-point">Monitoring, review and enhancement</div>
+          <div class="qa-point">Alignment with QQI and institutional requirements</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="kicker">Useful links</div>
+        <h3 style="font-size:1.1rem">Policies, procedures and examples</h3>
+        <p style="font-size:.72rem;color:var(--muted)">Explore the policy framework and some related examples of partnership activity at NCI.</p>
+        <div class="link-list" style="margin-top:15px">
+          <a href="https://www.ncirl.ie/QIE/QAES/Partnerships"><span>QAES Partnerships domain</span><span>↗</span></a>
+          <a href="https://ncisupporthub.ncirl.ie/hc/en-ie/articles/21895450215580-Policy-on-Collaborative-Provision-and-Academic-Partnerships"><span>Academic Partnerships Policy</span><span>↗</span></a>
+          <a href="https://www.ncirl.ie/P-TECH-Collaboration"><span>P-TECH Collaboration</span><span>↗</span></a>
+          <a href="https://www.ncirl.ie/Students/Careers/-Employers/Recruit-Students-Graduates/Become-an-Employer-Partner"><span>Become an Employer Partner</span><span>↗</span></a>
+          <a href="https://www.ncirl.ie/International-events"><span>International events &amp; outreach</span><span>↗</span></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="cta">
+      <div>
+        <h2>Interested in partnering with NCI?</h2>
+        <p>We welcome enquiries from organisations interested in academic collaboration, progression pathways, collaborative provision, industry engagement or other forms of partnership activity. Tell us about your organisation and what you hope to achieve, and we can identify the most appropriate next steps.</p>
+      </div>
+      <div class="actions">
+        <a class="btn ghost" href="mailto:QIE@ncirl.ie?subject=Academic%20Partnership%20Enquiry">Email QIE</a>
+        <a class="btn ghost" href="https://www.ncirl.ie/About/Contact">Contact NCI ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer><div class="wrap">
+  <div class="footer-grid">
+    <div><div class="footer-mark">NCI</div><p>National College of Ireland<br>Changing Lives Through Education</p></div>
+    <div><h3>Academic Partnerships</h3><ul><li><a href="#overview">Overview</a></li><li><a href="#models">Partnership models</a></li><li><a href="#partners">Our partners</a></li></ul></div>
+    <div><h3>Quality & Governance</h3><ul><li><a href="#quality">Quality framework</a></li><li><a href="https://www.ncirl.ie/QIE/QAES/Partnerships">QAES Partnerships</a></li><li><a href="https://ncisupporthub.ncirl.ie/hc/en-ie/articles/21895450215580-Policy-on-Collaborative-Provision-and-Academic-Partnerships">Policy</a></li></ul></div>
+    <div><h3>Contact</h3><ul><li><a href="mailto:QIE@ncirl.ie">QIE@ncirl.ie</a></li><li><a href="https://www.ncirl.ie/About/Contact">Contact NCI</a></li><li><a href="https://www.ncirl.ie/About/Our-People/A-Z-Staff-Directory">Staff directory</a></li></ul></div>
+  </div>
+  <div class="fine">Prototype for internal discussion — not an official published NCI page.</div>
+</div></footer>
+
+<script>
+document.querySelectorAll('.tab').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.partner').forEach(card=>{
+      const show = filter === 'all' || card.dataset.type === filter;
+      card.classList.toggle('show', show);
+    });
+  });
+});
+</script>
+</body>
+</html>
